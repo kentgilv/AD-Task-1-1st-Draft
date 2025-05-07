@@ -15,9 +15,13 @@
                 <a href="/index.php">PHP</a>
             </div>
             <div>
-
             </div>
             <div>
+                <ul>
+                    <li><a href="">Home</a></li>
+                    <li><a href="">About</a></li>
+                    <li><a href="">Demo</a></li>
+                </ul>
 
             </div>
         </nav>
