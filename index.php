@@ -6,7 +6,13 @@
     <title>Task 1 | Application Development | Valencia</title>
 </head>
 <body>
-    
+    <header>
+        <nav>
+            <div></div>
+            <div></div>
+            <div></div>
+        </nav>
+    </header>
     
 </body>
 </html>
