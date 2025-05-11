@@ -1,0 +1,257 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-image: url(../img/hero-background.png);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 3.5rem;
+  padding-left: 2rem;
+  padding-right: 1.5rem;
+  font-family: "Roboto";
+  font-weight: bold;
+  position: sticky;
+  top: 0;
+  background-image: linear-gradient(rgba(0,0,0,.25), rgba(0,0,0,.125));
+}
+
+nav a {
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, .5);
+  text-decoration: none;
+}
+
+.nav-brand {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.brand-name {
+  font-size: 1.5rem;
+}
+
+.toggle-menu {
+  display: none;
+  margin-left: auto;
+}
+
+.toggle-menu-btn {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.material-icons {
+  color: white;
+  border-radius: 5px;
+  padding: 0.25rem;
+  margin-right: 0.25rem;
+  transition: all 0.3s;
+}
+
+.material-icons:hover {
+  background-color: white;
+  color: yellowgreen;
+  border-radius: 5px;
+  padding: 0.5rem;
+  margin-right: 0;
+}
+
+.material-icons:active {
+  transform: scale(0.75);
+}
+
+.navbar-links {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.navbar-links li {
+  list-style: none;
+  height: 3rem;
+  margin-top: 0.5rem;
+}
+
+.navbar-links a {
+  display: block;
+  height: 100%;
+  padding: 0.5rem 1rem 1rem 1rem;
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+  transition: all 0.5s, padding 0s;
+}
+
+.navbar-links a:hover {
+  background-color: white;
+  color: yellowgreen;
+  text-shadow: none;
+}
+
+.active-link {
+  border-bottom: 3px solid white;
+}
+
+nav li:has(#signUpBtnLink) {
+  height: auto;
+  margin: auto;
+}
+
+#signUpBtnLink {
+  background-color: yellowgreen;
+  color: white;
+  border: 2px solid yellowgreen;
+  border-radius: 20px;
+  width: 9rem;
+  padding: 0.25rem 1.5rem;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, .5);
+  text-align: center;
+  transition: all 0.3s, margin-bottom 0s, margin-top 0s;
+}
+
+#signUpBtnLink:hover {
+  transform: scale(1.1);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, .5);
+}
+
+#signUpBtnLink:active {
+  transform: scale(0.9);
+}
+
+@media (max-width: 900px) {
+  .navbar-links {
+    position: fixed;
+    top: 3.5rem;
+    right: -100%;
+    width: 100%;
+    background-image: linear-gradient(rgba(0,0,0,.25), rgba(0,0,0,.125));
+    backdrop-filter: blur(10px);
+    flex-direction: column;
+    gap: 0;
+    text-align: center;
+    transition: all 0.75s;
+  }
+
+  .navbar-links.active {
+    right: 0;
+  }
+
+  .toggle-menu {
+    display: flex;
+  }
+
+  .navbar-links li {
+    height: 3.5rem;
+    margin-top: 0;
+  }
+
+  .navbar-links a {
+    height: 100%;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    padding: 1rem;
+  }
+
+  .active-link {
+    border: none;
+  }
+
+  #signUpBtnLink {
+    margin-top: .5rem;
+    margin-bottom: 1rem;
+    color: white;
+  }
+
+}
+
+/* Hero Section */
+
+.hero-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 5.75rem;
+  gap: 5.75rem;
+}
+
+.hero-text {
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  flex: 1;
+}
+
+.hero-text h1 {
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+}
+
+.hero-text p {
+  font-family: "Roboto";
+  font-size: 1.2rem;
+  font-style: italic;
+  margin-bottom: 2rem;
+}
+
+#getStartedBtnLink {
+  display: inline-block;
+  color: white;
+  text-decoration: none;
+  font-family: "Roboto";
+  font-weight: bold;
+  background-color: yellowgreen;
+  border: 2px solid yellowgreen;
+  border-radius: 20px;
+  width: 10rem;
+  padding: 0.25rem 1.5rem;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, .5);
+  text-align: center;
+  transition: all 0.3s, margin-bottom 0s, margin-top 0s;
+}
+
+#getStartedBtnLink:hover {
+  transform: scale(1.1);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, .75);
+}
+
+#getStartedBtnLink:active {
+  transform: scale(0.9);
+}
+
+.hero-image {
+  min-width: 300px;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-image img {
+   width: 100%;
+   max-width: 450px;
+
+}
+
+@media (max-width: 900px) {
+  .hero-section {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+}
+
+footer {
+  color: white;
+  font-size: .75rem;
+  font-family: "Roboto";
+  text-align: center;
+  background-image: linear-gradient(rgba(0,0,0,.25), rgba(0,0,0,.125));
+}
